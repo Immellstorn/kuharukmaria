@@ -1,0 +1,507 @@
+/* -------------- Specification -------------- */
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	color: #434343;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active
+
+ {
+	outline: none;
+}
+
+a, button, input {
+	transition: all 0.5s ease;
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #434343;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 700;
+	color: #d9d9d9;
+}
+
+h2 {
+	font-size: 32px;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 400;
+}
+
+img {
+	max-width: 100%;
+}
+
+section {
+	padding: 100px 0;
+}
+
+
+/* ---------------------- Header ---------------------- */
+.header {
+	background: url('../img/background.jpg') no-repeat fixed center top/cover;
+	 -webkit-filter: grayscale(0%); /*Черно-белость background хэдера. Если чб не нужен - удалить строчку*/
+}
+
+/* ------- Navigation ------- */
+.navigation {
+	padding: 15px 0 40px;
+	background-color: #fff;
+}
+
+/*Telephone*/
+.navigation__tel,
+.nav__link {
+	position: relative;
+	color: #434343;
+}
+
+.navigation__tel:after,
+.nav__link:after {
+	position: absolute;
+	content:'';
+	height: 1px;
+	width: 0;
+	bottom: -1px;
+	left: 0;
+	background-color: #434343;
+	transition: all 0.2s ease;
+}
+
+.navigation__tel:hover:after,
+.nav__link:hover:after {
+	width: 100%;
+}
+
+/*List links*/
+.navigation__item {
+	margin-left: 35px;
+}
+
+.navigation__link {
+	position: relative;
+	font-size: 20px;
+	color: #fff;
+	z-index: 10;
+}
+
+.navigation__link:after {
+	position: absolute;
+	content: '';
+	height: 40px;
+	width: 40px;
+	background-color: #434343;
+	border-radius: 50%;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.3s ease;
+}
+
+.navigation__link:hover:after {
+	background-color: #fff;
+}
+
+/*Nav*/
+.nav {
+	padding: 30px 0;
+	align-items: center;
+}
+
+/*Hamburger*/
+.hamburger {
+	display: none;
+	width: 40px;
+	height: 28px;
+	position: relative;
+	margin-left: auto;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+}
+
+.hamburger span {
+	display: block;
+	position: absolute;
+	height: 5px;
+	width: 100%;
+	background: #434343;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+	top: 8px;
+}
+
+.hamburger span:nth-child(2) {
+	top: 21px;
+}
+
+.hamburger span:nth-child(3) {
+	top: 34px;
+}
+
+.hamburger.open span:nth-child(1) {
+	top: 21px;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {
+	opacity: 0;
+	left: -60px;
+}
+
+.hamburger.open span:nth-child(3) {
+	top: 21px;
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
+
+/*Logo*/
+.logo__text {
+	font-size: 32px;
+}
+
+.logo__text span {
+	font-size: 16px;
+	position: absolute;
+	bottom: -17px;
+	letter-spacing: 0.04em;
+}
+
+.nav__item {
+	margin-right: 25px;
+}
+
+.nav__list {
+	margin-top: 25px;
+}
+
+/*Main-screen*/
+.main-screen {
+	padding: 250px 0 270px;
+}
+
+.main-screen__text {
+	margin-top: 30px;
+	color: #d9d9d9;
+	font-size: 20px;
+}
+
+/* ---------------------- About-section ---------------------- */
+.about__img {
+	max-width: 391px;
+	 -webkit-filter: grayscale(0%); /*Черно-белость фото в секции "Обо мне". Если чб не нужен - удалить строчку*/
+}
+
+.about__text {
+	margin-top: 25px;
+}
+
+/* ---------------------- Services-section ---------------------- */
+.services__item img {
+	-webkit-filter: grayscale(0%); /*Черно-белость фоток услуг. Если чб не нужен - удалить строчку*/
+	margin: 35px 0 15px;
+}
+
+/* ---------------------- Advantages-section ---------------------- */
+.advantage__wrapper span {
+	flex: none;
+	text-align: center;
+	font-size: 25px;
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	background-color: #D9D9D9;
+	font-weight: 700;
+	line-height: 70px;
+	margin-right: 15px;
+}
+
+.advantage__heading {
+	margin-bottom: 25px;
+}
+
+.advantages__title {
+	margin-bottom: 60px;
+}
+
+/* ---------------------- Reviews-section ---------------------- */
+.reviews__wrapper {
+	padding: 70px 35px;
+	background-color: #E9E9E9;
+	max-width: 370px;
+	margin: 0 5px;
+}
+
+.reviews__text {
+	margin-bottom: 15px;
+}
+
+.reviews__date,
+.reviews__prof {
+	font-size: 14px;
+}
+
+.reviews__autor {
+	font-size: 25px;
+	margin: 20px 20px;
+}
+
+.reviews__btn {
+	display: block;
+	width: 270px;
+	padding: 12px 24px;
+	border-radius: 4px;
+	border: 1px #434343 solid;
+	margin: 40px auto 0;
+	color: #434343;
+}
+
+.reviews__btn:hover {
+	background: #434343;
+	color: #fff;
+}
+
+/* ------------ Contacts-section ------------ */
+.contacts-section {
+	background-color: #E9E9E9; 
+}
+
+.form__title {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.form {
+	max-width: 570px;
+	background-color: #fff;
+	padding: 40px 80px;
+	margin: 0 auto;
+}
+
+.form__input {
+	background-color: #E9E9E9;
+	width: 100%;
+	border-radius: 4px;
+	padding: 12px;
+	margin: 12px 0 24px;
+}
+
+.form__input-check {
+	margin-right: 15px;
+}
+
+.form__submit {
+	background-color: #555555;
+	color: #fff;
+	border: 1px solid #555555;
+	margin-top: 50px;
+}
+
+.form__submit:hover {
+	color: #555555;
+	background-color: #fff;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+	background-color: #555555;
+	padding: 40px 0;
+}
+
+.footer__text {
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+}
+
+/* ---------- Media Queries ---------- */
+/* 992 - 1200 px */
+@media screen and (max-width: 1199.98px) {
+
+}
+
+/* 768 - 992 px */
+@media screen and (max-width: 991.98px) {
+	.hamburger {
+		display: block;
+	}
+	nav {
+		display: none;
+	}
+	nav.open {
+		display: block;
+	}
+	.nav__list {
+	   position: fixed;
+	   flex-direction: column;
+	   right: 0;
+	   top: 139px;
+	   background-color: #fff;
+	   padding: 57px 30px 40px;
+	   width: 100%; 
+	   padding: 50px 17px 50px 45px;
+ 	   text-align: center;
+ 	   z-index: 1;
+	}
+	.nav__item {
+		margin-bottom: 10px;
+	}
+	.nav__link {
+		font-size: 20px;
+	}
+	.advantage__wrapper {
+		margin-bottom: 30px;
+	}
+	.reviews {
+		flex-direction: column;
+	}
+	.reviews__wrapper {
+		margin: 0 auto 15px;
+	}
+}
+
+/* 576 - 768 px */
+@media screen and (max-width: 767.98px) {
+	.about__img {
+		margin-top: 25px;
+		max-width: 100%;
+	}
+	.services__item {
+		margin-bottom: 20px;
+	}
+	.navigation__list {
+		margin-bottom: 15px;
+	}
+	.navigation__item {
+		margin: 0 20px 0;
+	}
+	.navigation__tel {
+		text-align: center;
+	}
+	.main-screen {
+		padding: 200px 0 180px;
+	}
+	section {
+		padding: 65px 0;
+	}
+	h1 {
+		font-size: 34px;
+	}
+	.about__title {
+		text-align: center;
+	}
+	h2 {
+		font-size: 30px;
+	}
+	.navigation {
+		padding: 15px 0 20px;
+	}
+	.reviews-section {
+		padding-top: 20px;
+	}
+}
+
+/* 320 - 576 px */
+@media screen and (max-width: 575.98px) {
+	.advantage__wrapper {
+		flex-direction: column;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	.advantage__wrapper span {
+		margin: 0 auto;
+	}
+	.logo__text {
+		font-size: 24px;
+	}
+	.logo__text span {
+ 		font-size: 12px;
+	}
+	.navigation__link {
+		font-size: 17px;
+	}
+	.navigation__link:after {
+		height: 34px;
+		width: 34px;
+	}
+	.main-screen {
+		padding: 110px 0 118px;
+	}
+	h1 {
+		font-size: 26px;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	.main-screen__text {
+		font-size: 17px;
+	}
+	.form {
+		padding: 35px 16px;
+	}
+
+}
+
+/* Form */
+.error {
+	color: #f00;
+	font-weight: 600;
+}
+
+.hidden {
+	display: none;
+}
