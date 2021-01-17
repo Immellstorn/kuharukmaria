@@ -43,7 +43,8 @@ a:hover {
 h1 {
 	font-size: 40px;
 	font-weight: 700;
-	color: #d9d9d9;
+	color: white;
+	text-shadow: black 0 0 2px;
 }
 
 h2 {
@@ -66,9 +67,14 @@ section {
 
 
 /* ---------------------- Header ---------------------- */
+
 .header {
 	background: url('../img/background.jpg') no-repeat fixed center top/cover;
-	 -webkit-filter: grayscale(0%); /*Черно-белость background хэдера. Если чб не нужен - удалить строчку*/
+}
+@media (hover: none) {
+   .header {
+       background-attachment: initial;
+   }
 }
 
 /* ------- Navigation ------- */
@@ -84,8 +90,13 @@ section {
 	color: #434343;
 }
 
-.navigation__tel:after,
-.nav__link:after {
+.nav__link {
+	border-bottom: 1px solid #fff;
+	transition: all 0.5s ease;
+}
+
+.navigation__tel:after
+/* .nav__link:after  */ {
 	position: absolute;
 	content:'';
 	height: 1px;
@@ -96,8 +107,8 @@ section {
 	transition: all 0.2s ease;
 }
 
-.navigation__tel:hover:after,
-.nav__link:hover:after {
+.navigation__tel:hover:after {
+/* .nav__link:hover:after { */
 	width: 100%;
 }
 
@@ -133,7 +144,7 @@ section {
 
 /*Nav*/
 .nav {
-	padding: 30px 0;
+	padding: 35px 0 18px;
 	align-items: center;
 }
 
@@ -219,12 +230,14 @@ section {
 }
 
 .nav__item {
-	margin-right: 25px;
+	margin: 12px;
+	cursor: pointer;
 }
 
-.nav__list {
-	margin-top: 25px;
+.nav__item:hover .nav__link {
+	border-bottom: 1px solid #000;
 }
+
 
 /*Main-screen*/
 .main-screen {
@@ -233,8 +246,10 @@ section {
 
 .main-screen__text {
 	margin-top: 30px;
-	color: #d9d9d9;
+    color: white;
+	text-shadow: black 0 0 2px;
 	font-size: 20px;
+	font-weight: 700;
 }
 
 /* ---------------------- About-section ---------------------- */
@@ -312,6 +327,10 @@ section {
 	color: #fff;
 }
 
+.filler {
+	height: 15px;
+}
+
 /* ------------ Contacts-section ------------ */
 .contacts-section {
 	background-color: #E9E9E9; 
@@ -378,21 +397,30 @@ section {
 	}
 	nav {
 		display: none;
+		position: absolute;
+		right: 50%;
+		transform: translateX(50%);
+		width: 100%;
+		top: 60px;
+		z-index: 10;
 	}
 	nav.open {
 		display: block;
 	}
 	.nav__list {
-	   position: fixed;
+		margin-top: 25px;
+	}
+	.nav__list {
+	   /*position: fixed;*/
 	   flex-direction: column;
-	   right: 0;
-	   top: 139px;
+	   /*right: 0;
+	   top: 139px;*/
 	   background-color: #fff;
 	   padding: 57px 30px 40px;
-	   width: 100%; 
+	   /*width: 100%;*/
 	   padding: 50px 17px 50px 45px;
  	   text-align: center;
- 	   z-index: 1;
+ 	   /*z-index: 1;*/
 	}
 	.nav__item {
 		margin-bottom: 10px;
@@ -413,6 +441,9 @@ section {
 
 /* 576 - 768 px */
 @media screen and (max-width: 767.98px) {
+    nav{
+		top: 40px;
+	}
 	.about__img {
 		margin-top: 25px;
 		max-width: 100%;
@@ -505,3 +536,8 @@ section {
 .hidden {
 	display: none;
 }
+
+.textarea { 
+	width:100%; 
+}
+

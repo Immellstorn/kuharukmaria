@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Мария Кухарук | Риэлтор</title>
+	<!-- FAVICON -->
+	<link type="image/x-icon" rel="shortcut icon" href="./favicon.ico">
+	<link type="image/png" sizes="512x512" rel="icon" href="./favicon-512x512.png">
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+	<!-- OG Tags -->
+	<meta property="og:title" content="Мария Кухарук | Отзывы">
+	<meta property="og:description" content='Любая сделка с недвижимостью в Санкт-Петербурге'>
+	<meta property="og:type" content="article">
+	<meta property="og:site_name" content="">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<section id="reviews-section" class="reviews-section">
+		<div class="container">
+			<a href="index.html" class="navigation__link" rel="nofollow" content="noindex" style="position:fixed; top:30px; left:30px;"><i class="fas fa-arrow-alt-circle-left"></i></a>
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="advantages__title">
+						Отзывы счастливых клиентов
+					</h2>
+				</div>
+				<div class="col-12" id="reviewspage">
+				</div>
+			</div>
+		</div>
+	</section>
+		<section id="new-review" class="new-review">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<form action="php/sendreviews.php" class="form review" method="post">
+						<h3 class="form__title">
+							Вы можете оставить свой отзыв, чтобы сделать мою работу лучше!
+						</h3>
+						<input class="form__input field" type="text" name="name" id="name" autocomplete="off" value="Ваше имя" required>
+						<textarea class="form__input textarea field" type="text" name="textarea" id="textarea" autocomplete="off" required></textarea>
+						<p class="form__text">
+							<input class="form__input-check" type="checkbox" value="yes" required>Я даю согласие на обработку персональных данных
+						</p>
+						<input type="submit" placeholder="Отправить" class="btn form__input form__submit" id="button" value="Добавить отзыв" data-target="#messageModal"> 
+					</form>
+					<!-- Modal -->
+					<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModal" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-body text-center">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h3 class="mt-4 mb-5 modal-title">Спасибо за Ваш отзыв!</h3>
+									<button type="submit" value="ok" class="btn btn-danger btn-round mb-5" data-dismiss="modal">Ок</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="row">
+				<p class="footer__text">
+					Мария Кухарук | Ваш персональный риэлтор
+				</p>
+			</div>
+		</div>
+	</footer>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
